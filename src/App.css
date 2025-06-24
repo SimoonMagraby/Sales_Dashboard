@@ -360,7 +360,6 @@ h1{
   padding: 5px;
   border-radius: 10px;
   display:flex;
-  
   justify-content: flex-start;
   flex: auto;
   
@@ -373,7 +372,6 @@ h1{
 
 .table-rec-order{
   margin: 20px 10px;
-  
 }
 
 .rec-table-content{
@@ -404,7 +402,7 @@ h1{
 }
 
 .pop-product-table{
-    margin: 20px 10px;
+    
     table-layout: fixed;  
 }
 
@@ -412,6 +410,8 @@ h1{
     display:flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 20px;
+    margin:20px;
 }
 
 @media(max-width:976px){
@@ -425,10 +425,6 @@ h1{
   }
 }
 
-.pop-product h2{
-  margin: 20px;
-  margin-bottom: 10px;
-}
 
 
 
@@ -540,7 +536,5 @@ td{
   .Sidebar.collapsed{
     display:none;
   }
-  .hide-on-mobile{
-    display:none;
-  }
+  
 }
