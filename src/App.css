@@ -242,9 +242,10 @@ h2{
 .ovr-content-column-1{
   display: flex; 
   flex-direction: column;
-  margin:25px;
+  margin:20px;
   min-width: 300px;
   flex: 2;
+  gap:20px;
   
 }
 
@@ -252,9 +253,10 @@ h2{
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin: 25px;
+  margin: 20px;
   margin-left: 0;
   min-width: 300px;
+  gap:20px
 }
 
 
@@ -270,7 +272,6 @@ h2{
 
 
 #barchart{
-  margin-top: 25px;
   height: 300px;
   background-color: #1c1c24;
   border-radius: 16px;
@@ -278,7 +279,7 @@ h2{
 }
 #productlist{
   background-color: #1c1c24;
-  margin-top: 25px;
+  
   padding: 20px;
   overflow: hidden;
   border-radius: 16px;  
@@ -290,7 +291,7 @@ h2{
 #shop-details{
   background-color: #1c1c24;
   min-height: 360px;
-  margin-bottom: 25px;
+  
   border-radius: 16px;
   
 }
@@ -356,21 +357,25 @@ h1{
 #recent-orders{
   background-color: #1c1c24;
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 5px;
   border-radius: 10px;
+  display:flex;
   
-/* .rec-order{
-  margin: 40px;
-} */
-}.rec-order-title{
+  justify-content: flex-start;
+  flex: auto;
+  
+}
+
+.rec-order-title{
   margin: 40px;
   margin-bottom: 10px;
 }
+
 .table-rec-order{
-  margin: 30px 10px;
+  margin: 20px 10px;
+  
 }
+
 .rec-table-content{
     padding: 5px 20px;
     color:white;
@@ -381,29 +386,35 @@ h1{
 }
 
 .thead-bg{
-    
-    
     border-radius: 20px;
-
 }
+
+.thead-row{
+  align-items: center;
+  justify-content: center;
+}
+
 .table-content{
     padding: 5px 10px;
     color:white;
     align-items: center;
-    
+    justify-content: center;
+    text-align: left;
+    word-wrap: break-word;    
 }
+
 .pop-product-table{
-    margin: 30px 10px;
+    margin: 20px 10px;
+    table-layout: fixed;  
 }
-
-
 
 .pop-product{
     display:flex;
     flex-direction: column;
     align-items: flex-start;
 }
-@media(max-width:600px){
+
+@media(max-width:976px){
   .pop-product{
     overflow: auto;
   }
@@ -497,7 +508,7 @@ td{
   justify-content: flex-start;
 }
 
-@media (max-width:425px){
+@media (max-width:426px){
   .topbar-container{
     flex-direction: column-reverse;
     gap:15px;
@@ -527,6 +538,9 @@ td{
     align-items: center;
   }
   .Sidebar.collapsed{
+    display:none;
+  }
+  .hide-on-mobile{
     display:none;
   }
 }

@@ -20,14 +20,14 @@ const RecentOrders = () => {
         <tbody>
           {recentOrders.map((order) => (
             <tr key={order.orderId}>
-              <td className="rec-table-content">
+              <td className="rec-table-content ">
                 <img
                   src={order.productImage}
                   alt={order.name}
                   className="product-img"
                 />
               </td>
-              <td className="rec-table-content">{order.product}</td>
+              <td className="rec-table-content hide-on-mobile">{order.product}</td>
               <td className="rec-table-content" id="money">${order.total.toFixed(2)}</td>
             </tr>
           ))}
