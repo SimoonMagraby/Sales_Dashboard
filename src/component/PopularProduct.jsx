@@ -1,4 +1,3 @@
-
 import React from "react";
 import inventory from "../data/inventory";
 import "../App.css"

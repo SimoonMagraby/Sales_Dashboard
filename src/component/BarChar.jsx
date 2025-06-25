@@ -1,4 +1,4 @@
-// src/components/SalesBarChart.jsx
+
 import React from "react";
 
 import { ResponsiveBar } from "@nivo/bar";
@@ -34,7 +34,10 @@ const BarChart = () => {
           tickRotation: 0,
           legend: "Month",
           legendPosition: "middle",
-          legendOffset: 36
+          legendOffset: 36,
+          format: (value) => {
+            return value.slice(0, 3);
+          },
         }}
         axisLeft={{
           tickSize: 0,

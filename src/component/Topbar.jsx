@@ -5,25 +5,32 @@ import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined
 import IconButton from '@mui/material/IconButton';
 import InputBase from '@mui/material/InputBase';
 import { useMediaQuery } from '@mui/material';
-
+import { useLocation } from 'react-router-dom';
 
 
 const Topbar = ({toggleSidebar}) =>{
-    
+    const location = useLocation();
     const today = new Date().toLocaleDateString();
     const isMobile = useMediaQuery('(max-width:425px)');
+
+    const getPageTitle = (pathname) => {
+    switch (pathname) {
+      case '/':
+        return 'Overview';
+      case '/trending':
+        return 'Trending';
+      case '/spreadsheet':
+        return 'Spreadsheet';
+      default:
+        return 'Page';
+    }
+  };
 
     return (
     
     <div className="topbar-container">
-
-        
-
         <div className="topbar-left">
-           
-            
-            
-                <h2>Overview</h2>
+                <h2>{getPageTitle(location.pathname)}</h2>
                 <p id='date'>{today}</p>
             
             
